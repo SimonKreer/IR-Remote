@@ -82,9 +82,9 @@ pio run -t upload
 
 📚 **Ausführliche Dokumentation:**
 
-- [`Projekteinführung_IR_Fernbedienung.md`](.docs/Projekteinführung_IR_Fernbedienung) - Detaillierte Projektbeschreibung
-- [`README_DEVELOPMENT.md`](./README_DEVELOPMENT.md) - Entwickler-Anleitung
-- [`Theoretische Grundlagen Universelle IR-Fernbedienung`](./docs/Theoretische Grundlagen Universelle IR-Fernbedienung) - Technische Grundlagen
+- [`docs/Projekteinführung_IR_Fernbedienung.md`](.docs/Projekteinführung_IR_Fernbedienung) - Detaillierte Projektbeschreibung
+- [`docs/README_DEVELOPMENT.md`](./README_DEVELOPMENT.md) - Entwickler-Anleitung
+- [`docs/Theoretische Grundlagen Universelle IR-Fernbedienung`](.docs/Theoretische Grundlagen Universelle IR-Fernbedienung) - Technische Grundlagen
 
 ## Lizenz
 
