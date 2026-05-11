@@ -1,0 +1,17 @@
+# PlatformIO Build-Verzeichnis (wird bei jedem Build neu erstellt)
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Lokale VS Code Einstellungen (optional, aber empfohlen)
+.vscode/.browse.vc.db
+.vscode/.strict_pm.json
+.vscode/ipch/
+.vscode/extensions.json
+
+# Falls du Unit-Tests lokal ausführst
+.test/
+
+# Systemdateien
+Thumbs.db
+.DS_Store
