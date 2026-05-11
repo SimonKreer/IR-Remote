@@ -46,21 +46,7 @@ Detaillierte Hardware-Dokumentation findest du im Ordner [`hardware/`](../hardwa
 
 ## Software
 
-Das Projekt nutzt **PlatformIO** für die Firmware-Entwicklung und ist optimiert für den ESP32.
-
-### Architektur
-
-```
-src/
-├── main.c              # Hauptprogramm
-├── ir_receiver.c       # IR-Empfänger-Logik
-├── ir_sender.c         # IR-Sender-Logik
-├── ui.c                # Benutzeroberfläche
-└── include/
-    ├── ir_receiver.h
-    ├── ir_sender.h
-    └── ui.h
-```
+Das Projekt nutzt **PlatformIO** für die Firmware-Entwicklung 
 
 ### Analysemethoden
 
