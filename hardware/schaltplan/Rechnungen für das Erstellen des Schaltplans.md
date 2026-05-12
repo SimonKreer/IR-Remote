@@ -77,6 +77,6 @@ $$V_{VS} = V_{CC} - \Delta V = 3,3\text{ V} - 0,045\text{ V} = \mathbf{3,255\tex
 
 Design-Richtlinien der Hersteller:
 
-- **TSOP-Filter (C2, C3):** Das Datenblatt fordert min. 100 nF. Deine Wahl von **100 nF (Keramik)** für schnelle Impulse und zusätzlich **10 µF (Elko)** für die Glättung übertrifft die Mindestanforderungen und sorgt für ein sehr stabiles Signal.
+- **TSOP-Filter (C2, C3):** Das Datenblatt fordert min. 100 nF. Meine Wahl von **100 nF (Keramik)** für schnelle Impulse und zusätzlich **10 µF (Elko)** für die Glättung übertrifft die Mindestanforderungen und sorgt für ein sehr stabiles Signal.
     
 - **Versorgung IR-Sender (C1, C4):** Da die IR-LED mit über 40 mA gepulst wird, sind die **10 µF** als lokaler Energiespeicher wichtig, damit die Spannung des ESP32 bei Sendevorgängen nicht kurzzeitig einbricht.
