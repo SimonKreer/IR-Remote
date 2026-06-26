@@ -21,8 +21,6 @@ Was soll das Gerät leisten?
 - **IR-Empfänger:** TSOP38238.
 - **IR-Sender:** TSAL6200 IR-LED mit einem **2N2222A-Transistor** zur Signalverstärkung.
 - **Bedienelemente:** 4 Taster für die Navigation und Auswahl (die Taster übernehmen je nach Menüpunkt Steuerungs- oder Sendefunktionen).
-- **Energieversorgung:** 3,7V LiPo-Akku (1500 mAh) über JST-Stecker am Heltec-Board.
-- **Gehäuse:** 3D gedrucktes Gehäuse.
 - **Pin-Belegung (GPIOs):**
 
 - **GPIO 17:** IR-Empfänger
@@ -35,7 +33,6 @@ Was soll das Gerät leisten?
 
 **UI-Konzept**
 
-- **Fokus:** Hohe Zuverlässigkeit und einfache Bedienung.
 - **Struktur:** Das Hauptmenü bietet Platz für **5 Geräteprofile** (Gerät 1 bis 5).
 - **Funktionsweise:** Nach Auswahl eines Geräts kann der Nutzer zwischen dem „Sniffen“ (Empfangen) und „Senden“ wählen. Die Taster dienen im Untermenü sowohl der Navigation als auch dem Auslösen der gespeicherten Befehle.
 
@@ -55,5 +52,3 @@ Um eine maximale Kompatibilität zu erreichen, werden zwei Methoden kombiniert:
 |**1. Protokoll-basiert**|Dekodierung von Protokoll, Adresse und Befehl (Command).|Sehr speichereffizient und präzise.|Funktioniert nur bei bekannten Protokollen (NEC, Sony, etc.).|
 |**2. RAW-Replay**|Speicherung des exakten Timing-Arrays (Puls/Pause-Dauern).|Funktioniert auch bei exotischen oder unbekannten Geräten.|Speicherintensiv und kritisch bei Timing-Abweichungen.|
 
-
-**Anpassung für den Seriellen Monitor:** Die Software soll so modifiziert werden, dass bei jedem Lesevorgang **beide Datensätze** (Protokoll-Daten UND RAW-Array) gleichzeitig im Seriellen Monitor ausgegeben und für die spätere Verwendung gespeichert werden.
