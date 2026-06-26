@@ -33,9 +33,9 @@ Dieses Projekt implementiert eine **universelle, lernfähige IR-Fernbedienung** 
 - IR-Empfänger: TSOP38238
 - IR-Sender: TSAL6200 IR-LED + 2N2222A Transistor zur Signalverstärkung
 
-**Bedienung & Energieversorgung:**
+**Bedienung:**
 - 4 Taster für Navigation und Auswahl
-- 3,7V LiPo-Akku (1500 mAh)
+
 
 **GPIO-Pinbelegung:**
 - GPIO 17: IR-Empfänger
@@ -91,8 +91,4 @@ pio run -t upload
 Dieses Projekt ist unter der **MIT License** lizenziert.
 Siehe [`LICENSE`](../docs/LICENSE) für Details.
 
----
 
-**Autor:** leckmichamarsch1  
-**Status:** 🚧 In Entwicklung  
-**Letzte Aktualisierung:** 2026-05-09
