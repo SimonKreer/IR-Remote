@@ -1,94 +1,92 @@
-# Infrarot Fernbedienung - Dokumentation
+# Infrared Remote Control - Documentation
 
-Fernbedienung basierend auf einem ESP32, die Fernbedienungen kopieren und deren Signale wieder senden kann.
+Infrared remote control based on an ESP32 that can copy remote controls and retransmit their signals.
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Projektübersicht](#projektübersicht)
+- [Project Overview](#project-overview)
 - [Hardware](#hardware)
 - [Software](#software)
 - [Installation](#installation)
-- [Dokumentation](#dokumentation)
-- [Lizenz](#lizenz)
+- [Documentation](#documentation)
+- [License](#license)
 
-## Projektübersicht
+## Project Overview
 
-Dieses Projekt implementiert eine **universelle, lernfähige IR-Fernbedienung** basierend auf dem ESP32 Mikrocontroller. Das Gerät kann IR-Signale von bestehenden Fernbedienungen aufzeichnen und speichern, um diese später mit maximaler Kompatibilität erneut zu senden.
+This project implements a **universal, learning IR remote control** based on the ESP32 microcontroller. The device can record IR signals from existing remote controls and retransmit them with precision.
 
-### Hauptmerkmale
+### Key Features
 
-- **Lernfunktion** - IR-Signale von bestehenden Fernbedienungen auslesen  
-- **Sendefunktion** - Gespeicherte IR-Signale präzise wiedergeben  
-- **Multigeräte-Support** - Profile für mehrere Geräte speichern  
-- **Benutzerfreundlich** - Integriertes OLED-Display mit Menüführung  
-- **Tragbar** - Akkubetrieb für mobilen Einsatz  
-- **Kompatibilität** - Unterstützt bekannte und unbekannte IR-Protokolle  
+- **Learning Function** - Read IR signals from existing remote controls  
+- **Transmission Function** - Reproduce stored IR signals precisely  
+- **Multi-Device Support** - Save profiles for multiple devices  
+- **User-Friendly** - Integrated OLED display with menu navigation  
+- **Portable** - Battery-powered for mobile use  
+- **Compatibility** - Supports known and unknown IR protocols  
 
 ## Hardware
 
-**Mikrocontroller:**
-- Heltec ESP32 (mit 0,96" OLED-Display und JST-Akku-Anschluss)
+**Microcontroller:**
+- Heltec ESP32 (with 0.96" OLED display and JST battery connector)
 
-**IR-Komponenten:**
-- IR-Empfänger: TSOP38238
-- IR-Sender: TSAL6200 IR-LED + 2N2222A Transistor zur Signalverstärkung
+**IR Components:**
+- IR Receiver: TSOP38238
+- IR Transmitter: TSAL6200 IR LED + 2N2222A transistor for signal amplification
 
-**Bedienung:**
-- 4 Taster für Navigation und Auswahl
+**User Interface:**
+- 4 buttons for navigation and selection
 
 
-**GPIO-Pinbelegung:**
-- GPIO 17: IR-Empfänger
-- GPIO 18: IR-Sender
-- GPIO 32, 33, 27, 14: Taster-Eingänge
+**GPIO Pin Assignment:**
+- GPIO 17: IR Receiver
+- GPIO 18: IR Transmitter
+- GPIO 32, 33, 27, 14: Button inputs
 
-Detaillierte Hardware-Dokumentation findest du im Ordner [`hardware/`](../hardware/).
+Detailed hardware documentation can be found in the [`hardware/`](../hardware/) folder.
 
 ## Software
 
-Das Projekt nutzt **PlatformIO** für die Firmware-Entwicklung 
+The project uses **PlatformIO** for firmware development.
 
-### Analysemethoden
+### Analysis Methods
 
-Für maximale Kompatibilität werden zwei Analysemethoden kombiniert:
+For maximum compatibility, two analysis methods are combined:
 
-1. **Protokoll-basiert** - Dekodierung von Protokoll, Adresse und Befehl
-   - Speichereffizient und präzise
-   - Funktioniert nur bei bekannten Protokollen (NEC, Sony, etc.)
+1. **Protocol-Based** - Decoding of protocol, address, and command
+   - Memory-efficient and precise
+   - Works only with known protocols (NEC, Sony, etc.)
 
-2. **RAW-Replay** - Speichern des exakten Timing-Arrays
-   - Funktioniert bei exotischen/unbekannten Geräten
-   - Speicherintensiv und kritisch bei Timing-Abweichungen
+2. **RAW-Replay** - Storage of exact timing array
+   - Works with exotic/unknown devices
+   - Memory-intensive and critical with timing deviations
 
 ## Installation
 
-Siehe die detaillierte Anleitung in [`docs/README_DEVELOPMENT.md`](./README_DEVELOPMENT.md).
+See the detailed instructions in [`docs/README_DEVELOPMENT.md`](./README_DEVELOPMENT.md).
 
-### Schnelstart
+### Quick Start
 
 ```bash
-# Repository klonen
-git clone https://github.com/leckmichamarsch1/Infrarot_Fernbedienung.git
-cd Infrarot_Fernbedienung
+# Clone repository
+git clone https://github.com/SimonKreer/IR-Remote.git
+cd IR-Remote
 
-# In VS Code mit PlatformIO öffnen
+# Open in VS Code with PlatformIO
 code .
 
-# Firmware kompilieren und hochladen
+# Compile and upload firmware
 pio run -t upload
 ```
 
-## Dokumentation
+## Documentation
 
- **Ausführliche Dokumentation:**
+**Comprehensive Documentation:**
 
-- [`Projekteinführung_IR_Fernbedienung`](./Projekteinführung_IR_Fernbedienung.md) - Detaillierte Projektbeschreibung
-- [`README_DEVELOPMENT.md`](./README_DEVELOPMENT.md) - Entwickler-Anleitung
-- [`Theoretische_Grundlagen_Universelle_IR-Fernbedienung.md`](./Theoretische_Grundlagen_Universelle_IR-Fernbedienung.md) - Technische Grundlagen
+- [`Project_Introduction_IR_Remote.md`](./Project_Introduction_IR_Remote.md) - Detailed project description
+- [`README_DEVELOPMENT.md`](./README_DEVELOPMENT.md) - Developer guide
+- [`Technical_Foundations_Universal_IR_Remote.md`](./Technical_Foundations_Universal_IR_Remote.md) - Technical fundamentals
 
-## Lizenz
+## License
 
-Dieses Projekt ist unter der **MIT License** lizenziert.
-Siehe [`LICENSE`](../docs/LICENSE) für Details.
-
-
+This project is licensed under the **MIT License**.
+See [`LICENSE`](../docs/LICENSE) for details.

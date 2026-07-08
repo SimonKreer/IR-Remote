@@ -1,107 +1,107 @@
-# Entwickler-Anleitung
+# Developer Guide
 
-## Setup mit PlatformIO
+## Setup with PlatformIO
 
-### Anforderungen
-- **VS Code** oder kompatible IDE
-- **PlatformIO Extension** für VS Code
-- **Python 3.6+** (wird von PlatformIO benötigt)
-- **ESP32 USB-Treiber** (CH340 oder CP2102, je nach Board-Version)
+### Requirements
+- **VS Code** or compatible IDE
+- **PlatformIO Extension** for VS Code
+- **Python 3.6+** (required by PlatformIO)
+- **ESP32 USB Drivers** (CH340 or CP2102, depending on board version)
 
 ### Installation
 
-1. **VS Code Extension installieren**
-   - Öffne VS Code
-   - Gehe zu Extensions (Ctrl+Shift+X)
-   - Suche nach "PlatformIO"
-   - Klicke auf "Install"
+1. **Install VS Code Extension**
+   - Open VS Code
+   - Go to Extensions (Ctrl+Shift+X)
+   - Search for "PlatformIO"
+   - Click "Install"
 
-2. **Projekt öffnen**
+2. **Open Project**
    ```bash
-   git clone https://github.com/leckmichamarsch1/Infrarot_Fernbedienung.git
-   cd Infrarot_Fernbedienung
-   # Öffne den Ordner in VS Code
+   git clone https://github.com/SimonKreer/IR-Remote.git
+   cd IR-Remote
+   # Open the folder in VS Code
    ```
 
-3. **Board auswählen** (falls nicht ESP32 DevKit)
-   - Öffne `platformio.ini`
-   - Änere `board = esp32doit-devkit-v1` zu deinem Board
-   - Speichern
+3. **Select Board** (if not ESP32 DevKit)
+   - Open `platformio.ini`
+   - Change `board = esp32doit-devkit-v1` to your board
+   - Save
 
-### Kompilieren und Upload
+### Build and Upload
 
-**Variante 1: Über UI**
-- Klick auf "PlatformIO" Icon (Ameise) in der linken Sidebar
-- Wähle "Build" zum Kompilieren
-- Wähle "Upload" zum auf Board übertragen
+**Option 1: Via UI**
+- Click "PlatformIO" icon (ant) in the left sidebar
+- Select "Build" to compile
+- Select "Upload" to transfer to board
 
-**Variante 2: Terminal**
+**Option 2: Via Terminal**
 ```bash
-# Kompilieren
+# Compile
 pio run
 
-# Kompilieren und hochladen
+# Compile and upload
 pio run -t upload
 
-# Serial Monitor öffnen
+# Open serial monitor
 pio device monitor
 ```
 
-### Dateistruktur
+### File Structure
 
 ```
 src/
-  ├── main.cpp              # Hauptprogramm
-  ├── config.h              # Konfigurationen
-  ├── ir_receiver.h         # IR-Empfänger Header
-  └── ir_sender.h           # IR-Sender Header
+  ├── main.cpp              # Main program
+  ├── config.h              # Configuration
+  ├── ir_receiver.h         # IR Receiver header
+  └── ir_sender.h           # IR Sender header
 
 include/
-  └── (externe Libraries)
+  └── (external libraries)
 
 lib/
-  └── (lokale Libraries)
+  └── (local libraries)
 
-platformio.ini             # PlatformIO Konfiguration
+platformio.ini             # PlatformIO configuration
 ```
 
-### GPIO-Pinbelegung
+### GPIO Pin Assignment
 
-Überprüfe deine Verdrahtung gegen diese Pins (angepassbar in `src/config.h`):
+Verify your wiring against these pins (configurable in `src/config.h`):
 
-| Komponente | ESP32 Pin | Beschreibung |
-|-----------|-----------|------------|
-| IR-Empfänger (TSOP38238) | GPIO 35 | Input |
-| IR-Sender (PWM) | GPIO 33 | Output |
+| Component | ESP32 Pin | Description |
+|-----------|-----------|----------|
+| IR Receiver (TSOP38238) | GPIO 35 | Input |
+| IR Transmitter (PWM) | GPIO 33 | Output |
 | GND | GND | Ground |
-| 5V | 5V | Stromversorgung |
+| 5V | 5V | Power supply |
 
-### Häufige Probleme
+### Troubleshooting
 
-**Fehler: "Board not found"**
-- Überprüfe die USB-Verbindung
-- Installiere den richtigen USB-Treiber für dein Board
-- Starte VS Code neu
+**Error: "Board not found"**
+- Check USB connection
+- Install correct USB driver for your board
+- Restart VS Code
 
-**Kompilierungsfehler**
-- Überprüfe die C++ Syntax
-- Stelle sicher, dass alle Includes korrekt sind
-- Lies die Fehlermeldung genau durch
+**Compilation errors**
+- Check C++ syntax
+- Ensure all includes are correct
+- Read error messages carefully
 
-**Upload schlägt fehl**
-- Versuche einen anderen USB-Port
-- Starte das ESP32 Board neu (kurz trennen)
-- Überprüfe die Baudrate in `platformio.ini`
+**Upload fails**
+- Try different USB port
+- Restart ESP32 board (disconnect briefly)
+- Check baud rate in `platformio.ini`
 
-### Nächste Schritte
+### Next Steps
 
-1. Implementiere die `ir_receiver.cpp` Funktionen
-2. Implementiere die `ir_sender.cpp` Funktionen
-3. Teste mit deiner Fernbedienung
-4. Erweitere um weitere Features (z.B. Speicherung, Webinterface)
+1. Implement `ir_receiver.cpp` functions
+2. Implement `ir_sender.cpp` functions
+3. Test with your remote control
+4. Extend with additional features (e.g., storage, web interface)
 
-### Weitere Ressourcen
+### Further Resources
 
-- [PlatformIO Dokumentation](https://docs.platformio.org/)
-- [ESP32 Dokumentation](https://docs.espressif.com/projects/esp-idf/en/latest/)
-- [Arduino Referenz](https://www.arduino.cc/reference/en/)
+- [PlatformIO Documentation](https://docs.platformio.org/)
+- [ESP32 Documentation](https://docs.espressif.com/projects/esp-idf/en/latest/)
+- [Arduino Reference](https://www.arduino.cc/reference/en/)
