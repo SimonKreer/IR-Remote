@@ -17,12 +17,12 @@ Dieses Projekt implementiert eine **universelle, lernfähige IR-Fernbedienung** 
 
 ### Hauptmerkmale
 
-✅ **Lernfunktion** - IR-Signale von bestehenden Fernbedienungen auslesen  
-✅ **Sendefunktion** - Gespeicherte IR-Signale präzise wiedergeben  
-✅ **Multigeräte-Support** - Profile für mehrere Geräte speichern  
-✅ **Benutzerfreundlich** - Integriertes OLED-Display mit Menüführung  
-✅ **Tragbar** - Akkubetrieb für mobilen Einsatz  
-✅ **Kompatibilität** - Unterstützt bekannte und unbekannte IR-Protokolle  
+- **Lernfunktion** - IR-Signale von bestehenden Fernbedienungen auslesen  
+- **Sendefunktion** - Gespeicherte IR-Signale präzise wiedergeben  
+- **Multigeräte-Support** - Profile für mehrere Geräte speichern  
+- **Benutzerfreundlich** - Integriertes OLED-Display mit Menüführung  
+- **Tragbar** - Akkubetrieb für mobilen Einsatz  
+- **Kompatibilität** - Unterstützt bekannte und unbekannte IR-Protokolle  
 
 ## Hardware
 
