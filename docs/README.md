@@ -80,7 +80,7 @@ pio run -t upload
 
 ## Dokumentation
 
-📚 **Ausführliche Dokumentation:**
+ **Ausführliche Dokumentation:**
 
 - [`Projekteinführung_IR_Fernbedienung`](./Projekteinführung_IR_Fernbedienung.md) - Detaillierte Projektbeschreibung
 - [`README_DEVELOPMENT.md`](./README_DEVELOPMENT.md) - Entwickler-Anleitung
