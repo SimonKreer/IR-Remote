@@ -1,5 +1,3 @@
 # IR-Remote
-Fernbedienung basierend auf einem ESP32, die Fernbedienungen kopieren und deren Signale wieder senden kann.
 
-
-
+Infrared remote control based on an ESP32 that can copy remote controls and retransmit their signals.

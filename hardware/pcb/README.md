@@ -1,34 +1,33 @@
 # PCB Design
 
-Dieser Ordner enthält alle PCB-Design-Dateien und -Dokumentation.
+This folder contains all PCB design files and documentation.
 
-## Dateien
+## Files
 
-### Ir_Fernbedienung_PCB.stp
-D3D STEP-Modell des PCB-Designs
-- Format: STEP (für CAD-Programme)
-- Zeigt die 3D-Geometrie der Platine
-- Nützlich für Gehäuse-Design
+### Ir_Remote_PCB.stp
+STEP 3D model of the PCB design
+- Format: STEP (for CAD programs)
+- Shows the 3D geometry of the board
+- Useful for enclosure design
 
-### Ir_Fernbedienung_Gerber.zip
-Gerber-Dateien für die PCB-Fertigung
+### Ir_Remote_Gerber.zip
+Gerber files for PCB manufacturing
 - Format: Gerber RS-274X
-- Enthält alle Schichten (Kupfer, Masken, Bestückung)
-- Ready to send zum PCB-Hersteller
+- Contains all layers (copper, masks, assembly)
+- Ready to send to PCB manufacturer
 
-### Ir_Fernbedienung_routing.pdf
-Routing-Diagramm der Platine
-- Zeigt die Verdrahtung auf der Platine
-- Nützlich zur Überprüfung der Signal-Integrität
+### Ir_Remote_routing.pdf
+Routing diagram of the board
+- Shows wiring on the board
+- Useful for checking signal integrity
 
-## Bestückungshinweise
+## Assembly Notes
 
-1. **SMD vs. THT:** Überprüfe die Komponentenliste für SMD- oder Durchsteck-Komponenten
-2. **Wärmemanagement:** Der Transistor kann warm werden; ggf. Kühlkörper überlegen
-3. **ESD-Schutz:** Bei der Bestückung ESD-Schutzmaßnahmen ergreifen
+1. **SMD vs. THT:** Check the component list for SMD or through-hole components
+2. **Thermal Management:** The transistor may get warm; consider a heat sink
+3. **ESD Protection:** Implement ESD protection measures during assembly
 
-## Weitere Schritte
+## Next Steps
 
-- PCB-Hersteller: JLCPCB
-- Bestückung: Von Hand 
-
+- PCB Manufacturer: JLCPCB
+- Assembly: Manual
